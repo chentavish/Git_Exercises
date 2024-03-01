@@ -1,0 +1,136 @@
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard$ mkdir learn_git_again
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard$ cd learn_git_again/
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ touch third.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again/.git/
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git commit -m "adding third.txt"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <tavish@Tavpc.>) not allowed
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git log
+fatal: your current branch 'master' does not have any commits yet
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git config --global user.name "tav"
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git commit -m "adding third.txt"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git add third.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git commit -m "adding third.txt"
+[master (root-commit) 5fc8e1c] adding third.txt
+ Committer: tav <tavish@Tavpc>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git log
+commit 5fc8e1cf5cb588d7ed3f84a32ed214e1eae22f1b (HEAD -> master)
+Author: tav <tavish@Tavpc>
+Date:   Thu Feb 29 20:22:19 2024 -0500
+
+    adding third.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ touch fourth.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git add fourth.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git commit -m "adding fourth.txt"
+[master ac6d782] adding fourth.txt
+ Committer: tav <tavish@Tavpc>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git log
+commit ac6d782143553bb52967b73722b2212bab5d8fc6 (HEAD -> master)
+Author: tav <tavish@Tavpc>
+Date:   Thu Feb 29 20:23:06 2024 -0500
+
+    adding fourth.txt
+
+commit 5fc8e1cf5cb588d7ed3f84a32ed214e1eae22f1b
+Author: tav <tavish@Tavpc>
+Date:   Thu Feb 29 20:22:19 2024 -0500
+
+    adding third.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ rm third.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git add third.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git commit -m "removing third.txt"
+[master 69c44aa] removing third.txt
+ Committer: tav <tavish@Tavpc>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git log
+commit 69c44aa0e8b74846fd0b334a4d68a57b8637577a (HEAD -> master)
+Author: tav <tavish@Tavpc>
+Date:   Thu Feb 29 20:24:12 2024 -0500
+
+    removing third.txt
+
+commit ac6d782143553bb52967b73722b2212bab5d8fc6
+Author: tav <tavish@Tavpc>
+Date:   Thu Feb 29 20:23:06 2024 -0500
+
+    adding fourth.txt
+
+commit 5fc8e1cf5cb588d7ed3f84a32ed214e1eae22f1b
+Author: tav <tavish@Tavpc>
+Date:   Thu Feb 29 20:22:19 2024 -0500
+
+    adding third.txt
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git config --global core.pager "cat"
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$ git config --global --list
+user.name=tav
+core.pager=cat
+tavish@Tavpc:/mnt/c/Users/Tavish/Desktop/SpringBoard/learn_git_again$
